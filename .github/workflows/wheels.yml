@@ -59,7 +59,7 @@ jobs:
       # 执行自研构建脚本 --keep-tmp 异常时保留临时目录
       - name: Build protected wheel (keep tmp for debug)
         working-directory: demo
-        run: python -m py2pydso package -m chroma_term_console -o ../wheelhouse --pyi
+        run: python -m py2pydso package -m chroma_term_console -o wheelhouse --pyi
 
       # 跨平台打印wheel列表
       - name: Print all built wheels in wheelhouse
@@ -112,14 +112,14 @@ jobs:
       # 失败上传调试包
       - name: Upload debug artifact on failure
         if: failure()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: debug-wheel-fail-cp${{ matrix.python }}-${{ matrix.os }}
           path: wheelhouse/
 
       # 上传产物
       - name: Upload built wheel artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: wheel-cp${{ matrix.python }}-${{ matrix.os }}
           path: wheelhouse/*.whl
