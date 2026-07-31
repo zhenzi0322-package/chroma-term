@@ -54,12 +54,12 @@ jobs:
 
       # Python依赖
       - name: Install build dependencies
-        run: pip install Pillow Cython setuptools wheel mypy
+        run: pip install Cython setuptools wheel mypy py2pydso -i https://pypi.org/simple -U
 
       # 执行自研构建脚本 --keep-tmp 异常时保留临时目录
       - name: Build protected wheel (keep tmp for debug)
         working-directory: demo
-        run: python build_protected.py package -m chroma_term_console -o ../wheelhouse --pyi --harden
+        run: python -m py2pydso package -m chroma_term_console -o ../wheelhouse --pyi --harden
 
       # 跨平台打印wheel列表
       - name: Print all built wheels in wheelhouse
