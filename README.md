@@ -1,10 +1,10 @@
 
 <p align="center">
-  <h1>chroma-term</h1>
-  <a href="https://pypi.org/project/chroma-term/"><img src="https://img.shields.io/pypi/v/chroma-term.svg" alt="PyPI version"></a>
-  <a href="https://pypi.org/project/chroma-term/"><img src="https://img.shields.io/badge/Python-3.8~3.14-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="https://github.com/zhenzi0322-package/chroma-term/blob/master/LICENSE"><img src="https://img.shields.io/pypi/l/chroma-term.svg" alt="License"></a>
-  <a href="https://tool.long920.cn/chroma-term"><img src="https://app.readthedocs.org/projects/zhenzi0322-tool/badge/?version=latest" alt="Documentation Status"></a>
+  <h1>chroma-term-console</h1>
+  <a href="https://pypi.org/project/chroma-term-console/"><img src="https://img.shields.io/pypi/v/chroma-term-console.svg" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/chroma-term-console/"><img src="https://img.shields.io/badge/Python-3.8~3.14-3776AB?logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://github.com/zhenzi0322-package/chroma-term-console/blob/master/LICENSE"><img src="https://img.shields.io/pypi/l/chroma-term-console.svg" alt="License"></a>
+  <a href="https://tool.long920.cn/chroma-term-console"><img src="https://app.readthedocs.org/projects/zhenzi0322-tool/badge/?version=latest" alt="Documentation Status"></a>
 </p>
 
 > 轻量级 `Python ANSI` 终端色彩库，支持 `4/8/256` 色、`24` 位真 `RGB` 色彩与文本样式，用于控制台文本美化。
@@ -12,7 +12,7 @@
 ## 安装
 
 ```bash
-pip install chroma-term
+pip install chroma-term-console
 ```
 
 ## 快速开始
@@ -22,7 +22,7 @@ pip install chroma-term
 最直观的方式，直接 `Chroma.颜色名('文本')` 即可看到彩色输出：
 
 ```python
-from chroma_term import Chroma
+from chroma_term_console import Chroma
 
 # 前景色
 print(Chroma.red('错误'))
